@@ -15,7 +15,8 @@ def main():
     files = filter(os.path.isfile, os.listdir(os.curdir))
     for file in files:
         if os.path.splitext(file)[1] == ".dbc":
-            add_attributes(file)
+            if os.access(file, os.W_OK) and os.access(file, os.R_OK):
+                add_attributes(file)
     return
 
 if __name__ == "__main__":
