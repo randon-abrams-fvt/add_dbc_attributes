@@ -56,6 +56,15 @@ m_cd_simulate_cycle_time = AttributeDefinition('CanDootSimulateCycleTime',
                                                 choices=None)
 attribute_def_list.append(m_cd_simulate_cycle_time)
 
+m_cg_message_inst_name = AttributeDefinition('CG_MessageInstName',
+                                   default_value="",
+                                   kind='BO_',
+                                   type_name='STRING',
+                                   minimum=None,
+                                   maximum=None,
+                                   choices=None)
+attribute_def_list.append(m_cg_message_inst_name)
+
 s_cd_group = AttributeDefinition('CanDootGroup',
                                     default_value='None',
                                     kind='SG_',
@@ -89,6 +98,7 @@ s_cg_vartype = AttributeDefinition('CG_VarType',
                                     type_name='ENUM',
                                     minimum=None,
                                     maximum=None,
-                                    choices=['bool', 'uint8_t', 'int8_t', 'uint16_t', 'int16_t', 'float', 'double'])
+                                    choices=['bool', 'uint8_t', 'int8_t',
+                                             'uint16_t', 'int16_t', 'uint32_t',
+                                             'int32_t', 'float', 'double'])
 attribute_def_list.append(s_cg_vartype)
-
