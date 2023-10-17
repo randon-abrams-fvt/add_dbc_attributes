@@ -65,6 +65,15 @@ m_cg_message_inst_name = AttributeDefinition('CG_MessageInstName',
                                    choices=None)
 attribute_def_list.append(m_cg_message_inst_name)
 
+m_cg_rx_tx = AttributeDefinition('CG_RX_TX',
+                                    default_value='RX',
+                                    kind='BO_',
+                                    type_name='ENUM',
+                                    minimum=None,
+                                    maximum=None,
+                                    choices=['RX', 'TX'])
+attribute_def_list.append(m_cg_rx_tx)
+
 s_cd_group = AttributeDefinition('CanDootGroup',
                                     default_value='None',
                                     kind='SG_',
