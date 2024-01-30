@@ -71,7 +71,7 @@ m_cg_rx_tx = AttributeDefinition('CG_RX_TX',
                                     type_name='ENUM',
                                     minimum=None,
                                     maximum=None,
-                                    choices=['RX', 'TX'])
+                                    choices=['RX', 'TX', 'NONE'])
 attribute_def_list.append(m_cg_rx_tx)
 
 s_cd_group = AttributeDefinition('CanDootGroup',
@@ -109,5 +109,5 @@ s_cg_vartype = AttributeDefinition('CG_VarType',
                                     maximum=None,
                                     choices=['bool', 'uint8_t', 'int8_t',
                                              'uint16_t', 'int16_t', 'uint32_t',
-                                             'int32_t', 'float', 'double'])
+                                             'int32_t', 'uin64_t', 'int64_t', 'float', 'double'])
 attribute_def_list.append(s_cg_vartype)
