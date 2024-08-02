@@ -5,12 +5,14 @@ from attribute_definitions import attribute_def_list
 
 def add_attributes(file):
     db = cantools.database.load_file(file)
+    print(f"Adding attributes to {file} ...")
     for message in db.messages:
         for attribute in attribute_def_list:
             if attribute.name not in message.dbc.attribute_definitions:
                 message.dbc.attribute_definitions[attribute.name] = attribute
         break
     cantools.database.dump_file(db, file)
+    print(f"   ...success!")
 
 def process_files(path):
     if os.path.isdir(path):
